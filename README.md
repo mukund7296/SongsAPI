@@ -95,15 +95,16 @@ This will list the contents of the current directory. Since your songs.json is l
 Copy the file into the container: Run the docker cp command from the same directory where songs.json is located:
 
 ```bash
-```
 docker cp songs.json songs_db:/songs.json
+```
+
 This will copy the songs.json file into the MongoDB container.
 
 Import the data into MongoDB: Now, run the import command to load the data into MongoDB:
 
 ```bash
-```
 docker exec -it songs_db mongoimport --db songs_db --collection songs --file /songs.json --jsonArray
+```
 
 This will import the songs data from the `songs.json` file into the `songs_db` database.
 
@@ -130,14 +131,13 @@ This means the Flask app is running on port 5002.
 You can interact with the API by sending HTTP requests to the following endpoints:
 
 
-
 * **Get all songs (with pagination)**:
 
   ```http
-  GET http://127.0.0.1:5002/songs?page=1&per_page=3
+  GET http://127.0.0.1:5002/songs?page=1&per_page=4
 
   ```
-    <img width="863" alt="image" src="https://github.com/user-attachments/assets/94df038b-dc2e-47d6-b8a0-05271ab49b2d" />
+<img width="966" alt="image" src="https://github.com/user-attachments/assets/a57d983d-9069-4691-9951-165cad916f4c" />
 
       ```http
   GET http://127.0.0.1:5002/songs
