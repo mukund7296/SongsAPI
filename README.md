@@ -160,9 +160,9 @@ You can interact with the API by sending HTTP requests to the following endpoint
 * **Get a specific song by its ID**:
 
   ```http
-  GET [http://127.0.0.1:5002/songs/681f8dde7a2277b2b2625fd4](http://127.0.0.1:5002/songs?id=681f8dde7a2277b2b2625fd4)
+  GET http://127.0.0.1:5002/songs?id=681f8dde7a2277b2b2625fd4
   ```
-  <img width="996" alt="image" src="https://github.com/user-attachments/assets/c019da40-a8b3-4a85-998b-dbd8aa7a5c08" />
+  <img width="875" alt="image" src="https://github.com/user-attachments/assets/8fef9b0e-9709-4d0b-a1b8-216ed787ee8b" />
 
 
 ### 8. Stopping the Flask App and MongoDB
