@@ -19,8 +19,8 @@ This project is a simple RESTful API built using Flask and MongoDB to manage son
 If you don't have the repository yet, clone it:
 
 ```bash
-git clone <repository-url>
-cd <project-directory>
+git clone https://github.com/mukund7296/SongsAPI.git
+cd SongsAPI
 ````
 
 ### 2. Create a Virtual Environment
