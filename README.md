@@ -164,6 +164,8 @@ You can interact with the API by sending HTTP requests to the following endpoint
   ```
   <img width="875" alt="image" src="https://github.com/user-attachments/assets/8fef9b0e-9709-4d0b-a1b8-216ed787ee8b" />
 
+# Terminal view
+<img width="1437" alt="image" src="https://github.com/user-attachments/assets/a36812eb-4431-4cac-8d1f-34e15332592f" />
 
 ### 8. Stopping the Flask App and MongoDB
 
