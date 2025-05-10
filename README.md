@@ -76,21 +76,7 @@ docker run -d --name songs_db -p 27017:27017 mongo:4.4
 docker ps
 ```
 
-#### Option 2: **Install MongoDB Locally**
-
-If you prefer running MongoDB locally:
-
-* On **macOS** (with Homebrew):
-
-  ```bash
-  brew services start mongodb@5.0
-  ```
-
-* On **Linux**:
-
-  ```bash
-  sudo systemctl start mongod
-  ```
+<img width="1256" alt="image" src="https://github.com/user-attachments/assets/8fc9e55b-e7bc-4529-ad8e-3bb609a16712" />
 
 ### 5. Import Data into MongoDB
 
@@ -99,6 +85,25 @@ Before running the Flask app, you need to import the songs data into MongoDB. Us
 ```bash
 mongoimport --db songs_db --collection songs --file songs.json --jsonArray
 ```
+Note : Find the correct path: Since you're currently in the directory that contains the songs.json file, you can simply use a relative path. You can confirm the location of songs.json by running:
+
+```bash
+ls
+```
+This will list the contents of the current directory. Since your songs.json is listed, you can now copy it directly into the Docker container.
+
+Copy the file into the container: Run the docker cp command from the same directory where songs.json is located:
+
+```bash
+```
+docker cp songs.json songs_db:/songs.json
+This will copy the songs.json file into the MongoDB container.
+
+Import the data into MongoDB: Now, run the import command to load the data into MongoDB:
+
+```bash
+```
+docker exec -it songs_db mongoimport --db songs_db --collection songs --file /songs.json --jsonArray
 
 This will import the songs data from the `songs.json` file into the `songs_db` database.
 
@@ -117,16 +122,28 @@ You should see output like:
 ```
 
 This means the Flask app is running on port 5002.
+<img width="566" alt="image" src="https://github.com/user-attachments/assets/411964b4-6221-437b-b54d-ae92637c1d42" />
+
 
 ### 7. Access the API
 
 You can interact with the API by sending HTTP requests to the following endpoints:
 
+
+
 * **Get all songs (with pagination)**:
 
   ```http
-  GET http://127.0.0.1:5002/songs?page=1&per_page=10
+  GET http://127.0.0.1:5002/songs?page=1&per_page=3
+
   ```
+    <img width="863" alt="image" src="https://github.com/user-attachments/assets/94df038b-dc2e-47d6-b8a0-05271ab49b2d" />
+
+      ```http
+  GET http://127.0.0.1:5002/songs
+   ```
+
+<img width="1437" alt="image" src="https://github.com/user-attachments/assets/d80166bd-84de-4c38-b3f6-a8320e5140fb" />
 
 * **Search songs by artist**:
 
