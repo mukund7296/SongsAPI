@@ -135,9 +135,9 @@ You can interact with the API by sending HTTP requests to the following endpoint
 
   ```http
   GET http://127.0.0.1:5002/songs?page=1&per_page=4
-
   ```
-<img width="966" alt="image" src="https://github.com/user-attachments/assets/a57d983d-9069-4691-9951-165cad916f4c" />
+  
+   <img width="966" alt="image" src="https://github.com/user-attachments/assets/a57d983d-9069-4691-9951-165cad916f4c" />
 
       ```http
   GET http://127.0.0.1:5002/songs
@@ -172,37 +172,4 @@ You can interact with the API by sending HTTP requests to the following endpoint
 ```bash
 docker stop songs_db
 docker rm songs_db
-```
-
-Or, if running MongoDB locally, stop the MongoDB service:
-
-* On **macOS** with Homebrew:
-
-  ```bash
-  brew services stop mongodb@5.0
-  ```
-
-* On **Linux**:
-
-  ```bash
-  sudo systemctl stop mongod
-  ```
-
-## API Documentation
-
-* The API supports pagination, search by artist and title, and retrieving songs by ID.
-* You can use tools like Postman or cURL to test the endpoints.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-```
-
-### Steps to Customize:
-
-1. **Repository URL**: Replace `<repository-url>` with the actual URL of your repository if you're hosting it on a platform like GitHub.
-2. **MongoDB Setup**: If you use a different MongoDB version or setup, make sure to adjust the instructions accordingly.
-
-This `README.md` covers setup, usage, and provides example API calls for your project! Let me know if you'd like to add more details or make any changes.
 ```
